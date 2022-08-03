@@ -1,0 +1,64 @@
+{%extends 'base.html'%}
+ {% load static %} 
+ {% block content %}
+
+<div class="container mt-5 mb-5">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="box-element">
+
+				<a  class="btn btn-warning" href="{% url 'our_products' %}">&#x2190; Continue Shopping</a>
+
+				<br>
+				<br>
+				<table class="table">
+					<tr>
+						<th><h5>Items: <strong>1</strong></h5></th>
+						<th><h5>Total:<strong> $ 1000</strong></h5></th>
+						<th>
+							<a  style="float:right; margin:5px;background-color:black;color:white;" class="p-2" href="{% url 'checkout' %}">Checkout</a>
+						</th>
+					</tr>
+				</table>
+
+			</div>
+
+			<br>
+			<div class="box-element">
+				<div class="cart-row">
+					<!-- <div style="flex:2"></div> -->
+					<div style="flex:2"><strong>Image</strong></div>
+					<div style="flex:2"><strong>Item</strong></div>
+					<div style="flex:1"><strong>Price</strong></div>
+					<div style="flex:1"><strong>Quantity</strong></div>
+					<div style="flex:1"><strong>Total</strong></div>
+				</div>
+			
+				<div class="cart-row">
+					<!-- <div style="flex:2">
+						
+						<model-viewer class="home-img3" src="{{item.product.imageURL}}" alt="New York" ar
+                        ar-modes="webxr scene-viewer quick-look" environment-image="neutral" auto-rotate
+                        camera-controls></model-viewer>
+					</div> -->
+					<div style="flex:2"><img src="{% static 'products/Butabond-SBR.png' %}" width="100" height="100"> </div>
+
+					<div style="flex:2"><p>Butabond SBR</p></div>
+					<div style="flex:1"><p>$ 1000</p></div>
+					<div style="flex:1">
+						<p class="quantity"> 1</p>
+						<div class="quantity">
+							<img data-product="1" data-action="add" class="chg-quantity update-cart" src="{% static  'images/arrow-up.png' %}" width="10" height="10">
+					
+							<img data-product="1" data-action="remove" class="chg-quantity update-cart" src="{% static  'images/arrow-down.png' %}" width="10" height="10">
+						</div>
+					</div>
+					<div style="flex:1"><p>$1000</p></div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
