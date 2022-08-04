@@ -3,7 +3,7 @@ from .import views
 
 urlpatterns = [
     
-    path('',views.index,name='index'),
+    path('',views.home,name='home'),
 
     path('internship',views.internship,name='internship'),
     path('civilworks',views.civilworks,name='civilworks'),
@@ -14,5 +14,6 @@ urlpatterns = [
     path('addtocart',views.addtocart,name='addtocart'),
     path('checkout',views.checkout,name='checkout'),
     path('ButabondSBR_moreinfo',views.ButabondSBR_moreinfo,name='ButabondSBR_moreinfo'),
+    path('construction_chemicals',views.construction_chemicals,name='construction_chemicals'),
     
 ]

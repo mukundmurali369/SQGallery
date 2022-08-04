@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def index(request):
+def home(request):
     return render(request,'index.html')
 
 def internship(request):
@@ -31,3 +31,6 @@ def checkout(request):
 
 def ButabondSBR_moreinfo(request):
     return render(request,'ButabondSBR_moreinfo.html')
+
+def construction_chemicals(request):
+    return render(request,'chemicals.html')

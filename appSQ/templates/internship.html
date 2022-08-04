@@ -27,82 +27,147 @@
     <link rel="stylesheet" href="{% static 'css/style2.css' %} ">
   </head>
   <body>
-    <div class="body-inner">
-      <div id="top-bar" class="top-bar"></div>
-    </div>
-    <header id="header" class="header-one">
-    
-      
-      <div class="site-navigation">
-        <div class="container">
-          
-            <div class="row">
-              <div class="col-lg-12">
-                  <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
-                      <a class="d-block" href="index.html">
-                        <img loading="lazy" src="{% static 'images/logo1.png' %}" alt="Constra" style="width: 60px; height: 50px">
-                      </a>
-                    </div>
-    
-                    <div id="navbar-collapse" class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav mr-auto">
-                          <li class="nav-item"><a class="nav-link" href="/" >Home</a></li> 
-    
-                          <li class="nav-item"><a class="nav-link" href="civilworks">Civil Works</a></li>
-                  
-                          <li class="nav-item active"><a class="nav-link" href="internship">Internship</a></li>
-    
-                          <li class="nav-item"><a class="nav-link" href="gallery">Gallery</a></li>
-                
-                          <li class="nav-item"><a class="nav-link" href="contactus">Contact</a></li>
-                          <li class="nav-item"><a class="nav-link" href="work_updates">Work Updates</a></li>
-    
-                          <li class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Our Products <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                              
-                              <li class="dropdown-submenu">
-                                  <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Water Proofing</a>
-                                  <ul class="dropdown-menu">
-                                    <li><a href="our_products">Butabond SBR</a></li>
-                                    <li><a href="#!">Mazik coat</a></li>
-                                    <li><a href="#!">Polycote BB</a></li>
-                                  </ul>
-                              </li>
-                              <li class="dropdown-submenu">
-                                  <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Wallputty</a>
-                                  <ul class="dropdown-menu">
-                                    <li><a href="#!">White Putty</a></li>
-                                    <li><a href="#!">Coarseputty</a></li>
-                                  </ul>
-                              </li>
-                            </ul>
-                        </li>
-                        </ul>
-                    </div>
-                  </nav>
-              </div>  
-            </div>
-            
-            <div class="nav-search">
-              <span id="search"><i class="fa fa-search"></i></span>
-            </div>
-    
-            <div class="search-block" style="display: none;">
-              <label for="search-field" class="w-100 mb-0">
-                <input type="text" class="form-control" id="search-field" placeholder="Type what you want and enter">
-              </label>
-              <span class="search-close">&times;</span>
-            </div>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark"
+         style="background-color:rgba(0,0,0,.5);
+                backdrop-filter: blur(10px);">
+      <a class="navbar-brand" href="#">
+        <img loading="lazy"
+             src="{% static 'images/logo1.png' %}"
+             alt="Constra"
+             style="width: 60px; height: 50px"/>
+      </a>
+      <button class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto ">
+          <a style="color:white;"
+             class="nav-item nav-link navl mx-lg-2"
+             href="{% url 'home' %}">
+            <h6 class="m-0 p-0 ">HOME</h6>
+          </a>
+          <a style="color:white;"
+             class="nav-link  nav-link navl mx-lg-2"
+             href="{% url 'civilworks' %}">
+            <h6 class="m-0 p-0 ">CIVIL WORKS</h6>
+          </a>
+          <a style="color:white;"
+             class="nav-link  nav-link navl mx-lg-2"
+             href="{% url 'construction_chemicals' %}">
+            <h6 class="m-0 p-0 ">CONSTRUCTION CHEMICALS</h6>
+          </a>
+          <a style="color:white;"
+             class="nav-link nav-link navl mx-lg-2"
+             href="{% url 'internship' %}">
+            <h6 class="m-0 p-0 ">INTERNSHIP</h6>
+          </a>
+          <a style="color:white;"
+             class="nav-link nav-link navl mx-lg-2"
+             href="{% url 'gallery' %}">
+            <h6 class="m-0 p-0 ">GALLERY</h6>
+          </a>
+          <a style="color:white;"
+             class="nav-link nav-link navl mx-lg-2"
+             href="{% url 'contactus' %}">
+            <h6 class="m-0 p-0 ">CONTACT</h6>
+          </a>
+          <a style="color:white;"
+             class="nav-link nav-link navl mx-lg-2"
+             href="{% url 'our_products' %}">
+            <h6 class="m-0 p-0 ">OUR PRODUCTS</h6>
+          </a>
         </div>
-      </div>  
-    </header>
+      </div>
+    </nav>
+    <style>
+      a h6{
+        color:white;
+      }
+      .navl{
+        color:white;
+        border-bottom:2px solid rgba(0,0,0,0);
+      }
+      .navl:hover{
+        important
+        color:orange;
+        border-bottom:2px solid orange;
+      }
+        a h6:hover{
+          color:orange;
+        }
+
+
+      
+    </style>
+
+    
+
+
+    <div class="banner-carousel banner-carousel-1 mb-0">
+      <div class="banner-carousel-item"
+           style="background-image:url('../static/images/slider-main/bg1.jpeg'); height: 500px;">
+        <div class="slider-content">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+              <div class="col-md-12 text-center"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner-carousel-item"
+           style="background-image:url('../static/images/slider-main/bg4.jpg'); height: 500px;">
+        <div class="slider-content text-left">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+              <div class="col-md-12">
+                <h2 class="slide-title-box" data-animation-in="slideInDown">World Class Service</h2>
+                <h3 class="slide-title" data-animation-in="fadeIn">When Service Matters</h3>
+                <h3 class="slide-sub-title" data-animation-in="slideInLeft">Your Choice is Simple</h3>
+                <p data-animation-in="slideInRight">
+                  <a href="services.html" class="slider btn btn-primary border">Our Services</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="banner-carousel-item"
+           style="background-image:url('../static/images/slider-main/bg6.jpg'); height: 500px;">
+        <div class="slider-content text-right">
+          <div class="container h-100">
+            <div class="row align-items-center h-100">
+              <div class="col-md-12">
+                <h2 class="slide-title" data-animation-in="slideInDown">Meet Our Engineers</h2>
+                <h3 class="slide-sub-title" data-animation-in="fadeIn">We believe sustainability</h3>
+                <p class="slider-description lead" data-animation-in="slideInRight">
+                  We will deal with your failure that determines how you achieve success.
+                </p>
+                <div data-animation-in="slideInLeft">
+                  <a href="contact.html"
+                     class="slider btn btn-primary"
+                     aria-label="contact-with-us">Get Free Quote</a>
+                  <a href="about.html"
+                     class="slider btn btn-primary border"
+                     aria-label="learn-more-about-us">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
     <div class="container-fluid bg-registration py-5 m-0 d-flex align-items-center justify-content-center"
-         style="margin: 90px 0; height:100vh;">
+         style="margin: 90px 0;
+                height:100vh;">
       <div class="container py-5">
         <div class="row align-items-center">
           <div class="col-lg-7 mb-5 mb-lg-0">
@@ -153,11 +218,10 @@
               <h1>Advantages of Civil Internships</h1>
               <hr>
             </div>
-            <p style="text-align:justify;" >
+            <p style="text-align:justify;">
               Student can get a real world experience and also our company provides a hands on training in a professional environment. Internships help to getting a chance to try all the possible jobs with explore different options in career i.e, our company provides best offers for interns.
               A chance to develop your knowledge and skills in a particular field or industry.  Exploring different roles to see which one you would like to pursue. Gaining valuable work experience to set you apart from other candidates. Increases your job readiness by providing you skills and exposure in relevant areas.
               Great opportunity to create a network of contacts. Applying the concepts and strategies of academic study in a live work environment.
-          
               <div class="col-12">
                 <div class="general-btn text-center">
                   <a class="btn btn-primary" href="#">Google Review & Rating</a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -167,215 +231,192 @@
                      data-target="#myModal">View All COLLEGES</a>
                 </div>
               </div>
-            
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- About End -->
-    
-              <div class="container">
-                <div class="modal fade" id="myModal" role="dialog">
-                  <div class="modal-dialog">
-                    <div class="modal-content p-5"
-                         style="margin-top: 80px;
-                         border-radius:20px;
-                                background-color:rgba(0,0,0,.8);
-                                color: white;">
-                      <div class="modal-body">
-                        <h5 class='text-center 'style="color:orange;">COLLEGES</h5>
-                        <ol>
-                          <li>
-                            SSM Polytechnic College, Tirur
-                          </li>
-                          <li>
-                            Govt. Polytechnic College, Nattakom
-                          </li>
-                          <li>
-                            Maria Polytechnic College, Marthandam
-                          </li>
-                          <li>
-                            Toc H Institute of Science & Technology, Arakkunnam
-                          </li>
-                          <li>
-                            Noorul Islam Centre for Higher Education, Nagercoil
-                          </li>
-                          <li>
-                            Federal Institute of Science and Technology, Angamaly
-                          </li>
-                          <li>
-                            Dr. N G P Institute of Technology, Coimbatore
-                          </li>
-                          <li>
-                            KMCT Polytechnic College, Kozhikode
-                          </li>
-                          <li>
-                            Mount Zion College of Engineering, Pathanamthitta
-                          </li>
-                          <li>
-                            Rajagiri School of Engineering and Technology, Ernakulam
-                          </li>
-                          <li>
-                            Marian Engineering College, Thiruvanathapuram
-                          </li>
-                          <li>
-                            Sreepathy Institute of Management and Technology, Palakkad
-                          </li>
-                          <li>
-                            Matha College of Technology, North Paravur
-                          </li>
-                          <li>
-                            Sree Narayana Guru College of Engineering and Technology, Payyanur, Kannur
-                          </li>
-                          <li>
-                            Kongu Engineering College, Erode, Tamil Nadu
-                          </li>
-                        </ol>
-
-                        <style>
+      <!-- About End -->
+      <div class="container">
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content p-5"
+                 style="margin-top: 80px;
+                        border-radius:20px;
+                        background-color:rgba(0,0,0,.8);
+                        color: white;">
+              <div class="modal-body">
+                <h5 class='text-center 'style="color:orange;">COLLEGES</h5>
+                <ol>
+                  <li>SSM Polytechnic College, Tirur</li>
+                  <li>Govt. Polytechnic College, Nattakom</li>
+                  <li>Maria Polytechnic College, Marthandam</li>
+                  <li>Toc H Institute of Science & Technology, Arakkunnam</li>
+                  <li>Noorul Islam Centre for Higher Education, Nagercoil</li>
+                  <li>Federal Institute of Science and Technology, Angamaly</li>
+                  <li>Dr. N G P Institute of Technology, Coimbatore</li>
+                  <li>
+                    KMCT Polytechnic College, Kozhikode
+                  </li>
+                  <li>
+                    Mount Zion College of Engineering, Pathanamthitta
+                  </li>
+                  <li>
+                    Rajagiri School of Engineering and Technology, Ernakulam
+                  </li>
+                  <li>
+                    Marian Engineering College, Thiruvanathapuram
+                  </li>
+                  <li>
+                    Sreepathy Institute of Management and Technology, Palakkad
+                  </li>
+                  <li>
+                    Matha College of Technology, North Paravur
+                  </li>
+                  <li>
+                    Sree Narayana Guru College of Engineering and Technology, Payyanur, Kannur
+                  </li>
+                  <li>
+                    Kongu Engineering College, Erode, Tamil Nadu
+                  </li>
+                </ol>
+                <style>
                           .modal-body ul li{
                             padding:5px;
                             
             
                           }
-                        </style>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                </style>
               </div>
-
-
-
-
-
-
- <!--footer starts from here-->
- <footer class="footer p-4" data-aos="fade-up">
-  <div class="container bottom_border">
-      <div class="row">
-          <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--footer starts from here-->
+      <footer class="footer p-4" data-aos="fade-up">
+        <div class="container bottom_border">
+          <div class="row">
+            <div class=" col-sm-4 col-md col-sm-4  col-12 col">
               <h5 class="headin5_amrc col_white_amrc pt2 " style="color:orange;">
-                  Find us
+                Find us
               </h5>
               <!--headin5_amrc-->
               <p>
-                  <span style="color:orange;"><i class="fa fa-location-arrow"></i></span> SQ Engineering Contractors P Ltd., XI/105-C1, Civil Lane
-                  Road, Kochi
+                <span style="color:orange;"><i class="fa fa-location-arrow"></i></span> SQ Engineering Contractors P Ltd., XI/105-C1, Civil Lane
+                Road, Kochi
               </p>
               <p>
-                  <span style="color:orange;"><i class="fa fa-location-arrow"></i></span><i class="fa fa-phone"></i> +91-9999878398
+                <span style="color:orange;"><i class="fa fa-location-arrow"></i></span><i class="fa fa-phone"></i> +91-9999878398
               </p>
               <p>
-                  <i class="fa fa fa-envelope"></i> infox@example.com
+                <i class="fa fa fa-envelope"></i> infox@example.com
               </p>
-          </div>
-          <div class=" col-sm-4 col-md  col-6 col">
+            </div>
+            <div class=" col-sm-4 col-md  col-6 col">
               <h5 class="headin5_amrc col_white_amrc pt2 " style="color:orange;">
-                  Quick links
+                Quick links
               </h5>
               <!--headin5_amrc-->
               <ul class="footer_ul_amrc">
-                  <li>
-                      <a href="http://webenlance.com">Epoxy & 3D Flooring</a>
-                  </li>
-                  <li>
-                      <a href="http://webenlance.com">Office Interior</a>
-                  </li>
-                  <li>
-                      <a href="http://webenlance.com">Hollow Man Montage</a>
-                  </li>
-                  <li>
-                      <a href="http://webenlance.com">Ebay & Amazon</a>
-                  </li>
-                  <li>
-                      <a href="http://webenlance.com">Hair Masking/Clipping</a>
-                  </li>
-                  <li>
-                      <a href="http://webenlance.com">Image Cropping</a>
-                  </li>
+                <li>
+                  <a href="http://webenlance.com">Epoxy & 3D Flooring</a>
+                </li>
+                <li>
+                  <a href="http://webenlance.com">Office Interior</a>
+                </li>
+                <li>
+                  <a href="http://webenlance.com">Hollow Man Montage</a>
+                </li>
+                <li>
+                  <a href="http://webenlance.com">Ebay & Amazon</a>
+                </li>
+                <li>
+                  <a href="http://webenlance.com">Hair Masking/Clipping</a>
+                </li>
+                <li>
+                  <a href="http://webenlance.com">Image Cropping</a>
+                </li>
               </ul>
               <!--footer_ul_amrc ends here-->
-          </div>
-          <div class=" col-sm-4 col-md  col-6 col">
+            </div>
+            <div class=" col-sm-4 col-md  col-6 col">
               <h5 class="headin5_amrc col_white_amrc pt2" style="color:orange;">
-                  Quick links
+                Quick links
               </h5>
               <!--headin5_amrc-->
               <ul class="footer_ul_amrc">
-                  <li>
-                      <a href="http://webenlance.com">Civil Works</a>
-                  </li>
-                  <li>
-                      <a href="http://webenlance.com">Dismantling & Demolishing</a>
-                  </li>
-                  <li>
-                      <a href="http://webenlance.com">Road Works</a>
-                  </li>
-                  <li>
-                      <a href="http://webenlance.com">Vectorization</a>
-                  </li>
-                  <li>
-                      <a href="http://webenlance.com">Aluminum Fabrication</a>
-                  </li>
-                  <li>
-                      <a href="http://webenlance.com">Drainage Works</a>
-                  </li>
+                <li>
+                  <a href="http://webenlance.com">Civil Works</a>
+                </li>
+                <li>
+                  <a href="http://webenlance.com">Dismantling & Demolishing</a>
+                </li>
+                <li>
+                  <a href="http://webenlance.com">Road Works</a>
+                </li>
+                <li>
+                  <a href="http://webenlance.com">Vectorization</a>
+                </li>
+                <li>
+                  <a href="http://webenlance.com">Aluminum Fabrication</a>
+                </li>
+                <li>
+                  <a href="http://webenlance.com">Drainage Works</a>
+                </li>
               </ul>
               <!--footer_ul_amrc ends here-->
-          </div>
-          <div class=" col-sm-4 col-md  col-12 col">
+            </div>
+            <div class=" col-sm-4 col-md  col-12 col">
               <h5 class="headin5_amrc col_white_amrc pt2" style="color:orange;">
-                  Follow us
+                Follow us
               </h5>
               <!--headin5_amrc ends here-->
               <ul class="footer_ul2_amrc">
-                  <li>
-                      <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
-                      <p>
-                          Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a>
-                      </p>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
-                      <p>
-                          Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a>
-                      </p>
-                  </li>
-                  <li>
-                      <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
-                      <p>
-                          Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a>
-                      </p>
-                  </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a>
+                  </p>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a>
+                  </p>
+                </li>
+                <li>
+                  <a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a>
+                  </p>
+                </li>
               </ul>
               <!--footer_ul2_amrc ends here-->
+            </div>
           </div>
-      </div>
-  </div>
-  <div class="container">
-      <!--foote_bottom_ul_amrc ends here-->
-      <p class="text-center">
-          Copyright @2022 | Designed With by <a href="#">Infox</a>
-      </p>
-      <ul class="social_footer_ul m-0 p-0 flexy">
-          <li>
+        </div>
+        <div class="container">
+          <!--foote_bottom_ul_amrc ends here-->
+          <p class="text-center">
+            Copyright @2022 | Designed With by <a href="#">Infox</a>
+          </p>
+          <ul class="social_footer_ul m-0 p-0 flexy">
+            <li>
               <a href="http://fb.com"style="color:orange;"><i class="fab fa-facebook-f"></i></a>
-          </li>
-          <li>
+            </li>
+            <li>
               <a href="http://linkedin.com"style="color:orange;"><i class="fab fa-twitter"></i></a>
-          </li>
-          <li>
+            </li>
+            <li>
               <a href="http://webenlance.com"style="color:orange;"><i class="fab fa-linkedin"></i></a>
-          </li>
-          <li>
+            </li>
+            <li>
               <a href="http://webenlance.com"style="color:orange;"><i class="fab fa-instagram"></i></a>
-          </li>
-      </ul>
-      <!--social_footer_ul ends here-->
-  </div>
-</footer>
-<style>
+            </li>
+          </ul>
+          <!--social_footer_ul ends here-->
+        </div>
+      </footer>
+      <style>
 *footer*/ .col_white_amrc {
 color: #FFF;
 }
@@ -507,41 +548,29 @@ text-decoration: none;
 }
 
 /* Credit to https://bootsnipp.com/snippets/bxDBA */
-</style>
-  
-  <script src="{% static 'plugins/jQuery/jquery.min.js' %} "></script>
-  
-  <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %} " defer></script>
-  
-  <script src="{% static 'plugins/slick/slick.min.js' %} "></script>
-  <script src="{% static ' plugins/slick/slick-animation.min.js' %}"></script>
- 
-  <script src="{% static 'plugins/colorbox/jquery.colorbox.js' %} "></script>
- 
-  <script src="{% static 'plugins/shuffle/shuffle.min.js' %} " defer></script>
-
-
-  
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
-  
-  <script src="plugins/google-map/map.js" defer></script>
-
- 
-  <script src="{% static 'js/script.js' %} "></script>
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
-    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
-    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
-    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
-    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
-    <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
-    <script src="{% static 'lib/slick/slick.min.js' %}"></script>
-    <!-- Template Javascript -->
-    <script src="{% static 'js/main.js' %}"></script>
+      </style>
+      <script src="{% static 'plugins/jQuery/jquery.min.js' %} "></script>
+      <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %} " defer></script>
+      <script src="{% static 'plugins/slick/slick.min.js' %} "></script>
+      <script src="{% static ' plugins/slick/slick-animation.min.js' %}"></script>
+      <script src="{% static 'plugins/colorbox/jquery.colorbox.js' %} "></script>
+      <script src="{% static 'plugins/shuffle/shuffle.min.js' %} " defer></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU" defer></script>
+      <script src="plugins/google-map/map.js" defer></script>
+      <script src="{% static 'js/script.js' %} "></script>
+      <!-- JavaScript Libraries -->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+      <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+      <script src="{% static 'lib/wow/wow.min.js' %}"></script>
+      <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+      <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
+      <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
+      <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+      <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+      <script src="{% static 'lib/slick/slick.min.js' %}"></script>
+      <!-- Template Javascript -->
+      <script src="{% static 'js/main.js' %}"></script>
       <script src="{% static 'plugins/jQuery/jquery.min.js' %} "></script>
       <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %} " defer></script>
       <script src="{% static 'plugins/slick/slick.min.js' %} "></script>

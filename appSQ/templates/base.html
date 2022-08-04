@@ -71,7 +71,7 @@
     <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet" />
   
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    
   
     <!-- Template Stylesheet -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet" />
@@ -79,81 +79,60 @@
 
   </head>
   <body>
-    <div class="body-inner">
-      <div id="top-bar" class="top-bar"></div>
-    </div>
-    <header id="header" class="header-one">
-    
-      
-        <div class="site-navigation">
-          <div class="container">
-            
-              <div class="row">
-                <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
-                        <a class="d-block" href="index.html">
-                          <img loading="lazy" src="{% static 'images/logo1.png' %}" alt="Constra" style="width: 60px; height: 50px">
-                        </a>
-                      </div>
-      
-                      <div id="navbar-collapse" class="collapse navbar-collapse">
-                          <ul class="nav navbar-nav mr-auto">
-                            <li class="nav-item active"><a class="nav-link" href="/" >Home</a></li> 
-      
-                            <li class="nav-item"><a class="nav-link" href="civilworks">Civil Works</a></li>
-                    
-                            <li class="nav-item"><a class="nav-link" href="internship">Internship</a></li>
-      
-                            <li class="nav-item"><a class="nav-link" href="gallery">Gallery</a></li>
-                  
-                            <li class="nav-item"><a class="nav-link" href="contactus">Contact</a></li>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark"style="background-color:rgba(0,0,0,.5); backdrop-filter: blur(10px);">
+      <a class="navbar-brand" href="#">
+        <img loading="lazy"
+             src="{% static 'images/logo1.png' %}"
+             alt="Constra"
+             style="width: 60px; height: 50px"/>
+      </a>
+      <button class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto ">
+          <a style="color:white;" class="nav-item nav-link navl mx-lg-2" href="{% url 'home' %}"><h6 class="m-0 p-0 ">HOME</h6> </a>
+          <a style="color:white;"class="nav-link  nav-link navl mx-lg-2" href="{% url 'civilworks' %}"><h6 class="m-0 p-0 ">CIVIL WORKS</h6> </a>
+          <a style="color:white;"class="nav-link  nav-link navl mx-lg-2" href="{% url 'construction_chemicals' %}"><h6 class="m-0 p-0 ">CONSTRUCTION CHEMICALS</h6> </a>
+          <a style="color:white;"class="nav-link nav-link navl mx-lg-2" href="{% url 'internship' %}"><h6 class="m-0 p-0 ">INTERNSHIP</h6> </a>
+          <a style="color:white;"class="nav-link nav-link navl mx-lg-2" href="{% url 'gallery' %}"><h6 class="m-0 p-0 ">GALLERY</h6> </a>
+          <a style="color:white;"class="nav-link nav-link navl mx-lg-2"href="{% url 'contactus' %}"><h6 class="m-0 p-0 ">CONTACT</h6> </a>
+          <a style="color:white;"class="nav-link nav-link navl mx-lg-2"href="{% url 'our_products' %}"><h6 class="m-0 p-0 ">OUR PRODUCTS</h6> </a>
+        </div>
+      </div>
+    </nav>
 
-                            <li class="nav-item"><a class="nav-link" href="work_updates">Work Updates</a></li>
+    <style>
+      a h6{
+        color:white;
+      }
+      .navl{
+        color:white;
+        border-bottom:2px solid rgba(0,0,0,0);
+      }
+      .navl:hover{
+        important
+        color:orange;
+        border-bottom:2px solid orange;
+      }
+        a h6:hover{
+          color:orange;
+        }
+
+
       
-                            <li class="nav-item dropdown">
-                              <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Our Products <i class="fa fa-angle-down"></i></a>
-                              <ul class="dropdown-menu" role="menu">
-                                
-                                <li class="dropdown-submenu">
-                                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Water Proofing</a>
-                                    <ul class="dropdown-menu">
-                                      <li><a href="our_products">Butabond SBR</a></li>
-                                      <li><a href="#!">Mazik coat</a></li>
-                                      <li><a href="#!">Polycote BB</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown-submenu">
-                                    <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Wallputty</a>
-                                    <ul class="dropdown-menu">
-                                      <li><a href="#!">White Putty</a></li>
-                                      <li><a href="#!">Coarseputty</a></li>
-                                    </ul>
-                                </li>
-                              </ul>
-                          </li>
-                          </ul>
-                      </div>
-                    </nav>
-                </div>  
-              </div>
-              
-              <div class="nav-search">
-                <span id="search"><i class="fa fa-search"></i></span>
-              </div>
-      
-              <div class="search-block" style="display: none;">
-                <label for="search-field" class="w-100 mb-0">
-                  <input type="text" class="form-control" id="search-field" placeholder="Type what you want and enter">
-                </label>
-                <span class="search-close">&times;</span>
-              </div>
-          </div>
-        </div>  
-      </header>
+    </style>
+    
+    
+
+
+
     <div class="banner-carousel banner-carousel-1 mb-0">
       <div class="banner-carousel-item"
            style="background-image:url('../static/images/slider-main/bg1.jpeg'); height: 500px;">
@@ -470,8 +449,7 @@ text-decoration: none;
   </style>
   
   <script src="{% static 'plugins/jQuery/jquery.min.js' %} "></script>
-  
-  <script src="{% static 'plugins/bootstrap/bootstrap.min.js' %} " defer></script>
+
   
   <script src="{% static 'plugins/slick/slick.min.js' %} "></script>
   <script src="{% static ' plugins/slick/slick-animation.min.js' %}"></script>
