@@ -25,11 +25,12 @@
     <link rel="stylesheet" href="{% static 'plugins/colorbox/colorbox.css' %} ">
     <link rel="stylesheet" href="{% static 'css/style.css' %} ">
     <link rel="stylesheet" href="{% static 'css/style2.css' %} ">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Bebas+Neue&family=Cinzel+Decorative:wght@700&family=Fjalla+One&family=Fugaz+One&family=Hubballi&family=Koulen&family=League+Gothic&family=Lobster&family=Oswald:wght@500&family=Pacifico&family=Rambla&family=Righteous&family=Ropa+Sans&family=Staatliches&family=Yanone+Kaffeesatz:wght@500&display=swap');
+    </style>
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark"
-         style="background-color:rgba(0,0,0,.5);
-                backdrop-filter: blur(10px);">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-1">
       <a class="navbar-brand" href="#">
         <img loading="lazy"
              src="{% static 'images/logo1.png' %}"
@@ -73,6 +74,11 @@
             <h6 class="m-0 p-0 ">GALLERY</h6>
           </a>
           <a style="color:white;"
+          class="nav-link nav-link navl mx-lg-2"
+          href="{% url 'work_updates' %}">
+         <h6 class="m-0 p-0 ">WORK UPDATES</h6>
+       </a>
+          <a style="color:white;"
              class="nav-link nav-link navl mx-lg-2"
              href="{% url 'contactus' %}">
             <h6 class="m-0 p-0 ">CONTACT</h6>
@@ -101,14 +107,31 @@
         a h6:hover{
           color:orange;
         }
-
+        .bg-color{
+          background-color:rgba(0,0,0,.9);
+        }
+        .bg-1{
+          background-color:rgba(0,0,0,.4);
+          backdrop-filter: blur(15px);
+        }
 
       
     </style>
+    <script type="text/javascript">
+      var nav = document.querySelector('nav');
 
-    
-
-
+      window.addEventListener('scroll', function () {
+          if (window.pageYOffset > 100) {
+              nav.classList.add('bg-color', 'shadow');
+              nav.classList.remove('bg-1', 'shadow');
+          } 
+          else {
+            nav.classList.add('bg-1', 'shadow');
+              nav.classList.remove('bg-color', 'shadow');
+          }
+      });
+      AOS.init();
+    </script>
     <div class="banner-carousel banner-carousel-1 mb-0">
       <div class="banner-carousel-item"
            style="background-image:url('../static/images/slider-main/bg1.jpeg'); height: 500px;">
@@ -162,9 +185,6 @@
         </div>
       </div>
     </div>
-
-
-
     <div class="container-fluid bg-registration py-5 m-0 d-flex align-items-center justify-content-center"
          style="margin: 90px 0;
                 height:100vh;">
@@ -215,7 +235,9 @@
           <div class="col-lg-7">
             <div class="text-left mb-4">
               <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Benefits</h5>
-              <h1>Advantages of Civil Internships</h1>
+              <h1>
+                Advantages of Civil Internships
+              </h1>
               <hr>
             </div>
             <p style="text-align:justify;">
@@ -239,21 +261,34 @@
       <div class="container">
         <div class="modal fade" id="myModal" role="dialog">
           <div class="modal-dialog">
-            <div class="modal-content p-5"
-                 style="margin-top: 80px;
-                        border-radius:20px;
-                        background-color:rgba(0,0,0,.8);
-                        color: white;">
+            <div class="modal-content p-2"
+                 style="margin-top: 80px; border-radius:20px; background-color:rgb(225,225,225); color: gray; border-left:8px solid orange; ">
               <div class="modal-body">
-                <h5 class='text-center 'style="color:orange;">COLLEGES</h5>
-                <ol>
-                  <li>SSM Polytechnic College, Tirur</li>
-                  <li>Govt. Polytechnic College, Nattakom</li>
-                  <li>Maria Polytechnic College, Marthandam</li>
-                  <li>Toc H Institute of Science & Technology, Arakkunnam</li>
-                  <li>Noorul Islam Centre for Higher Education, Nagercoil</li>
-                  <li>Federal Institute of Science and Technology, Angamaly</li>
-                  <li>Dr. N G P Institute of Technology, Coimbatore</li>
+                <h3 class='text-center 'style=" font-family: 'Rambla', sans-serif">
+                  COLLEGES
+                </h3>
+                <ul>
+                  <li>
+                    SSM Polytechnic College, Tirur
+                  </li>
+                  <li>
+                    Govt. Polytechnic College, Nattakom
+                  </li>
+                  <li>
+                    Maria Polytechnic College, Marthandam
+                  </li>
+                  <li>
+                    Toc H Institute of Science & Technology, Arakkunnam
+                  </li>
+                  <li>
+                    Noorul Islam Centre for Higher Education, Nagercoil
+                  </li>
+                  <li>
+                    Federal Institute of Science and Technology, Angamaly
+                  </li>
+                  <li>
+                    Dr. N G P Institute of Technology, Coimbatore
+                  </li>
                   <li>
                     KMCT Polytechnic College, Kozhikode
                   </li>
@@ -278,10 +313,16 @@
                   <li>
                     Kongu Engineering College, Erode, Tamil Nadu
                   </li>
-                </ol>
+                </ul>
                 <style>
                           .modal-body ul li{
-                            padding:5px;
+                           
+                            border-bottom:1px solid rgba(0,0,0,.1);
+                            color:gray;
+                            padding:3px;
+                            font-family: 'Rambla', sans-serif;
+                            
+
                             
             
                           }

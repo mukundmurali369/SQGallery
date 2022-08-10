@@ -1,79 +1,144 @@
-{%extends 'base.html'%}
- {% load static %} 
- {% block content %}
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+          crossorigin="anonymous">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="box-element" id="form-wrapper">
+                    <form id="form">
+                        <div id="shipping-info">
+                            <h4 class="p-3 text-center">Shipping Information</h4>
+                            <div class="m-3">
+                                <input required
+                                       class="form-control"
+                                       type="text"
+                                       name="fname"
+                                       placeholder="First Name"
+                                       style="border-color:orange;">
+                            </div>
+                            <div class="m-3">
+                                <input required
+                                       class="form-control"
+                                       type="text"
+                                       name="lname"
+                                       placeholder="Last Name"
+                                       style="border-color:orange;">
+                            </div>
+                            <div class="m-3">
+                            
+                                <textarea rows="3" class="form-control" name="address" placeholder="Address" style="border-color:orange;" class="w-100">
+</textarea>
+                            </div>
+                            <div class="flexy mx-3">
+                                <div class="left1">
+                                    <input class="form-control"
+                                           type="text"
+                                           name="state"
+                                           placeholder="State.."
+                                           style="border-color:orange;">
+                                </div>
+                                <div class="right1">
+                                    <input class="form-control"
+                                           type="text"
+                                           name="zipcode"
+                                           placeholder="Zip code.."
+                                           style="border-color:orange;">
+                                </div>
+                            </div>
+                            <style>
+    .flexy{
+        display:flex;
+        aligh-items:center;
+        justify-content:center;
+    }
+    .left1{
+        width:50%;
+        
+    }
+    .right1{
+        width:50%;
+        
+    }
+    .left1 input ,.right1 input{
+        width:99%;
+    }
 
-
-<div class="container mt-5">
-    <div class="row">
-       <div class="col-lg-6">
-           <div class="box-element" id="form-wrapper">
-               <form id="form">
-                   <div id="user-info">
-                       <div class="form-field">
-                           <input required class="form-control" type="text" name="name" placeholder="Name.." style="border-color:orange;">
-                       </div>
-                       <div class="form-field">
-                           <input required class="form-control" type="email" name="email" placeholder="Email.." style="border-color:orange;">
-                       </div>
-                   </div>
-                   
-                   <div id="shipping-info">
-                       <hr>
-                       <p>Shipping Information:</p>
-                       <hr>
-                       <div class="form-field">
-                           <input class="form-control" type="text" name="address" placeholder="Address.." style="border-color:orange;">
-                       </div>
-                       <div class="form-field">
-                           <input class="form-control" type="text" name="city" placeholder="City.." style="border-color:orange;">
-                       </div>
-                       <div class="form-field">
-                           <input class="form-control" type="text" name="state" placeholder="State.." style="border-color:orange;">
-                       </div>
-                       <div class="form-field">
-                           <input class="form-control" type="text" name="zipcode" placeholder="Zip code.." style="border-color:orange;">
-                       </div>
-                      
-                   </div>
-
-                   <hr>
-                   <input id="form-button" class=" w-100 p-2 rounded-pill" type="submit" value="Continue" style="background-color:black; color:white;">
-               </form>
-           </div>
-
-           <br>
-           <div class="box-element hidden" id="payment-info">
-               <small>Paypal Options</small>
-               <!-- <button id="make-payment">Make payment</button> -->
-               <div id="paypal-button-container"></div>
-           </div>
-           
-       </div>
-
-       <div class="col-lg-6">
-           <div class="box-element">
-               <a  class="btn btn-outline-dark" style="border-color:orange;" href="{% url 'addtocart' %}">&#x2190; Back to Cart</a>
-               <hr>
-               <h3>Order Summary</h3>
-               <hr>
-               
-               <div class="cart-row">
-                    <div style="flex:2"><img src="{% static 'products/Butabond-SBR.png' %}" width="100" height="100"> </div> 
-                   <div style="flex:2"><p>Butabond SBR</p></div>
-                   <div style="flex:1"><p>$ 1000</p></div>
-                   <div style="flex:1"><p>x 1</p></div>
-               </div>
-              
-               <h5>Items:  1</h5>
-               <h5>Total:   $ 1000</h5>
-           </div>
-       </div>
-   </div>
-</div>
-
-<script src="https://www.paypal.com/sdk/js?client-id=AfFqejBbe5PBPFCVYaP3d92wqYx_HnfM-m_I00Llfg5dDqjDqWZHaNIAQrcnfVQ69h2pcxdS2RPOfXxN&currency=INR"></script>
-
-<script>
+                            </style>
+                            <div class="m-3">
+                                <input required
+                                       class="form-control"
+                                       type="email"
+                                       name="email"
+                                       placeholder="Email"
+                                       style="border-color:orange;">
+                            </div>
+                            <div class="m-3">
+                                <input required
+                                       class="form-control"
+                                       type="text"
+                                       name="mobile"
+                                       placeholder="Mobile"
+                                       style="border-color:orange;">
+                            </div>
+                            <div class="m-3">
+                                <input class="form-control"
+                                       type="text"
+                                       name="city"
+                                       placeholder="City.."
+                                       style="border-color:orange;">
+                            </div>
+                        </div>
+                        <input id="form-button"
+                               class=" w-100 p-2 rounded-pill"
+                               type="submit"
+                               value="Continue"
+                               style="background-color:black;
+                                      color:white;">
+                    </form>
+                </div>
+                <br>
+                <div class="box-element hidden" id="payment-info">
+                    <small>Paypal Options</small>
+                    <!-- <button id="make-payment">Make payment</button> -->
+                    <div id="paypal-button-container"></div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="box-element">
+                    <a class="btn btn-outline-dark"
+                       style="border-color:orange;"
+                       href="{% url 'addtocart' %}">&#x2190; Back to Cart</a>
+                    <hr>
+                    <h3>Order Summary</h3>
+                    <hr>
+                    <div class="cart-row">
+                        <div style="flex:2">
+                            <img src="{% static 'products/Butabond-SBR.png' %}"
+                                 width="100"
+                                 height="100">
+                        </div>
+                        <div style="flex:2">
+                            <p>Butabond SBR</p>
+                        </div>
+                        <div style="flex:1">
+                            <p>$ 1000</p>
+                        </div>
+                        <div style="flex:1">
+                            <p>x 1</p>
+                        </div>
+                    </div>
+                    <h5>Items:  1</h5>
+                    <h5>Total:   $ 1000</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=AfFqejBbe5PBPFCVYaP3d92wqYx_HnfM-m_I00Llfg5dDqjDqWZHaNIAQrcnfVQ69h2pcxdS2RPOfXxN&currency=INR"></script>
+    <script>
  var total = '{{order.get_cart_total}}'
      // Render the PayPal button into #paypal-button-container
      paypal.Buttons({
@@ -104,10 +169,8 @@
 
 
      }).render('#paypal-button-container');
- </script>
-
-
-<script type="text/javascript">
+    </script>
+    <script type="text/javascript">
    var shipping = '{{order.shipping}}'
 
 
@@ -198,6 +261,6 @@
      })
 
    }
-</script>
-
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 {% endblock %}

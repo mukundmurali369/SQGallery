@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Bebas+Neue&family=Cinzel+Decorative:wght@700&family=Fjalla+One&family=Fugaz+One&family=Hubballi&family=Koulen&family=League+Gothic&family=Lobster&family=Oswald:wght@500&family=Pacifico&family=Rambla&family=Righteous&family=Ropa+Sans&family=Staatliches&family=Yanone+Kaffeesatz:wght@500&display=swap');
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
           crossorigin="anonymous">
- 
     <!-- About Start -->
     <div class="container-fluid p-5 chemicals-background ">
         <div class="container">
@@ -38,8 +39,8 @@
                 <div class="col-lg-6 wow fadeInUp py-5" data-wow-delay="0.5s">
                     <div class="h-100">
                         <div class="border-start border-5 border-warning ps-4 mb-5 m-0 p-0">
-                            <h6 class="text-body text-uppercase mb-2 p-0">OUR PRODUCTS</h6>
-                            <h1 class="display-6 m-0 p-0">CONSTRUCTION CHEMICALS</h1>
+                            <h6 class="text-body text-uppercase mb-2 p-0 text-secondary"style="font-family: 'Fjalla One', sans-serif;">OUR PRODUCTS</h6>
+                            <h1 class="display-6 m-0 p-0" style="font-family: 'Staatliches', cursive;">CONSTRUCTION CHEMICALS</h1>
                         </div>
                         <p style="text-align:justify;" class="m-0">
                             SQ Engineering Contractors Pvt Ltd. a world class civil engineering and construction company established
@@ -77,59 +78,111 @@
             </div>
         </div>
     </div>
-    <div class=" m-0 p-5 fadeInUp wow"
+    <div class=" m-0 p-5 fadeInUp  wow"
          data-wow-delay="0.5s"
          style="background-color:white;">
         <div class="border-start border-5 border-warning ps-4 mb-5 m-0 p-0">
-            <h6 class="text-body text-uppercase mb-2 p-0">PRODUCTS</h6>
-            <h1 class="display-6 m-0 p-0">COMPANIES WE HAVE</h1>
+            <h6 class="text-body text-uppercase mb-2 p-0"style="font-family: 'Righteous', cursive;">PRODUCTS</h6>
+            <h1 class="display-6 m-0 p-0" style="font-family: 'Fjalla One', sans-serif;">COMPANIES WE HAVE</h1>
         </div>
-        <div class="imagess row containter-fluid border-top border-2 p-sm-5 border-warning">
-            <div class="col-sm-3 flexy  fadeInUp wow" data-wow-delay="0.5s">
-                <img class=" " src="{% static 'images/companies/com-logo (1).jpg' %}">
+        <div class=" row containter-fluid border-top flexy border-2 p-sm-5 border-warning">
+            <div class="col-sm-4 box3 fadeInUp wow" data-wow-delay="0.5s">
+                <div class="flexyy">
+                    <img class=" " src="{% static 'images/companies/com-logo (1).jpg' %}">
+                </div>
+                <h2 class="cname w-100 justify-content-bottom p-2" style="font-family: 'Rambla', sans-serif">DR.FIXIT</h2>
             </div>
-            <div class="col-sm-3 flexy  fadeInUp wow" data-wow-delay="0.5s">
-                <img src="{% static 'images/companies/com-logo (1).png' %}">
+
+            <div class="col-sm-4 box3 fadeInUp wow" data-wow-delay="0.5s">
+                <div class="flexyy">
+                    <img class=" " src="{% static 'images/companies/com-logo (1).png' %}">
+                </div>
+                
+                    <h2 class="cname  w-100 justify-content-bottom text-center  p-2"style="font-family: 'Rambla', sans-serif">ASIAN PAINTS</h2>
+              
+                
             </div>
-            <div class="col-sm-3 flexy  fadeInUp wow" data-wow-delay="0.5s">
-                <img src="{% static 'images/companies/com-logo (2).png' %}">
+
+            <div class="col-sm-4 box3 fadeInUp wow" data-wow-delay="0.5s">
+                <div class="flexyy">
+                    <img class=" " style="width:120px;" src="{% static 'images/companies/com-logo (2).png' %}">
+                </div>
+                <h2 class="cname w-100 justify-content-bottom text-center  p-2"style="font-family: 'Rambla', sans-serif">BERGER</h2>
             </div>
-            <div class="col-sm-3 flexy  fadeInUp wow" data-wow-delay="0.5s">
-                <img src="{% static 'images/companies/com-logo (3).png' %}">
+
+            <div class="col-sm-4 box3 fadeInUp wow" data-wow-delay="0.5s">
+                <div class="flexyy">
+                    <img class=" " src="{% static 'images/companies/com-logo (3).png' %}">
+                </div>
+                <h2 class="cname w-100 justify-content-bottom text-center "style="font-family: 'Rambla', sans-serif">CONPAC</h2>
             </div>
-            <div class="col-sm-3 flexy  fadeInUp wow ht" data-wow-delay="0.5s">
-                <img src="{% static 'images/companies/com-logo (4).png' %}">
+
+            <div class="col-sm-4 box3 fadeInUp wow" data-wow-delay="0.5s">
+                <div class="flexyy">
+                    <img class=" " src="{% static 'images/companies/com-logo (4).png' %}">
+                </div>
+                <h2 class="cname w-100 justify-content-bottom text-center"style="font-family: 'Rambla', sans-serif">FOSROC</h2>
             </div>
-            <div class="col-sm-3 flexy  fadeInUp wow" data-wow-delay="0.5s">
-                <img src="{% static 'images/companies/com-logo (5).png' %}">
+
+            <div class="col-sm-4 box3 fadeInUp wow" data-wow-delay="0.5s">
+                <div class="flexyy">
+                    <img class=" " src="{% static 'images/companies/com-logo (5).png' %}">
+                </div>
+                <h2 class="cname w-100 justify-content-bottom text-center "style="font-family: 'Rambla', sans-serif">LA GREENS</h2>
             </div>
-            <div class="col-sm-3 flexy   fadeInUp wow" data-wow-delay="0.5s">
-                <img src="{% static 'images/companies/com-logo (6).png' %}">
+
+            <div class="col-sm-4 box3 fadeInUp wow" data-wow-delay="0.5s">
+                <div class="flexyy">
+                    <img class=" " src="{% static 'images/companies/com-logo (6).png' %}">
+                </div>
+                <h2 class="cname w-100 justify-content-bottom text-center "style="font-family: 'Rambla', sans-serif">LATICRETE</h2>
             </div>
-            <div class="col-sm-3 flexy  fadeInUp wow" data-wow-delay="0.5s">
-                <img src="{% static 'images/companies/com-logo (7).png' %}">
+
+            <div class="col-sm-4 box3 fadeInUp wow" data-wow-delay="0.5s">
+                <div class="flexyy">
+                    <img class=" " src="{% static 'images/companies/com-logo (7).png' %}">
+                </div>
+                <h2 class="cname w-100 justify-content-bottom text-center "style="font-family: 'Rambla', sans-serif">SIKA</h2>
             </div>
-            <div class="col-sm-3 flexy   fadeInUp wow" data-wow-delay="0.5s">
-                <img src="{% static 'images/companies/com-logo (8).png' %}">
+
+            <div class="col-sm-4 box3 fadeInUp wow" data-wow-delay="0.5s">
+                <div class="flexyy">
+                    <img class=" " src="{% static 'images/companies/com-logo (8).png' %}">
+                </div>
+                <h2 class="cname w-100 justify-content-bottom text-center "style="font-family: 'Rambla', sans-serif">MYK ARMENT</h2>
             </div>
-            <div class="col-sm-3 flexy   fadeInUp wow" data-wow-delay="0.5s">
-                <img src="{% static 'images/companies/com-logo (9).png' %}">
+
+            <div class="col-sm-4 box3 fadeInUp wow" data-wow-delay="0.5s">
+                <div class="flexyy">
+                    <img class=" " src="{% static 'images/companies/com-logo (9).png' %}">
+                </div>
+                <h2 class="cname w-100 justify-content-bottom text-center "style="font-family: 'Rambla', sans-serif">PEDILITE</h2>
             </div>
-            <div class="col-sm-3 flexy   fadeInUp wow" data-wow-delay="0.5s">
-                <img src="{% static 'images/companies/com-logo (10).png' %}">
+
+            <div class="col-sm-4 box3 fadeInUp wow" data-wow-delay="0.5s">
+                <div class="flexyy">
+                    <img class=" " src="{% static 'images/companies/com-logo (10).png' %}">
+                </div>
+                <h2 class="cname w-100 justify-content-bottom text-center "style="font-family: 'Rambla', sans-serif">REDWOP</h2>
             </div>
-            <div class="col-sm-3 flexy   fadeInUp wow" data-wow-delay="0.5s">
-                <img src="{% static 'images/companies/com-logo (11).png' %}">
+
+            <div class="col-sm-4 box3 fadeInUp wow" data-wow-delay="0.5s">
+                <div class="flexyy">
+                    <img class=" " src="{% static 'images/companies/com-logo (11).png' %}">
+                </div>
+                <h2 class="cname w-100 justify-content-bottom text-center "style="font-family: 'Rambla', sans-serif">WALLMAX</h2>
             </div>
+
+           
+
+
+           
         </div>
     </div>
     <style>
-        .flexy img{
-            width: 180px;
+        .flexyy img{
+            width: 90px;
             height: auto;
-            
-            filter: grayscale(100%);
-            
             transition: 1s;
         
         }
@@ -142,8 +195,60 @@
         }
        
         img:hover{
-            filter: grayscale(0%);
+            
             transform: scale(1.2);
+        }
+        .flexyy{
+            
+            height:80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .box3:hover {
+            background-color:rgb(255, 208, 0);
+            color:white;
+        }
+        .box3:hover h2{
+            color:white;
+        }
+        .cname{
+                
+                color:white;
+                height:100%;
+                display:flex;
+            align-items:center;
+            justify-content:center;
+            
+
+        }
+        .box3{
+border-radius:15px;
+            height:120px;
+            transition:1s;
+            box-shadow:1px 1px 5px gray;
+            margin:10px;
+            width:30%;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            border-left:5px solid orange;
+
+            
+        }
+        .box3 h2{
+            color:gray;
+        }
+
+        @media (max-width: 950px) {
+
+            .box3{
+                width:100%;
+            }
+
+
+
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>

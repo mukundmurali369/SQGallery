@@ -67,7 +67,7 @@
           crossorigin="anonymous">
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark"style="background-color:rgba(0,0,0,.5); backdrop-filter: blur(10px);">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-1">
       <a class="navbar-brand" href="#">
         <img loading="lazy"
              src="{% static 'images/logo1.png' %}"
@@ -85,17 +85,49 @@
       </button>
       <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto ">
-          <a style="color:white;" class="nav-item nav-link navl mx-lg-2" href="{% url 'home' %}"><h6 class="m-0 p-0 ">HOME</h6> </a>
-          <a style="color:white;"class="nav-link  nav-link navl mx-lg-2" href="{% url 'civilworks' %}"><h6 class="m-0 p-0 ">CIVIL WORKS</h6> </a>
-          <a style="color:white;"class="nav-link  nav-link navl mx-lg-2" href="{% url 'construction_chemicals' %}"><h6 class="m-0 p-0 ">CONSTRUCTION CHEMICALS</h6> </a>
-          <a style="color:white;"class="nav-link nav-link navl mx-lg-2" href="{% url 'internship' %}"><h6 class="m-0 p-0 ">INTERNSHIP</h6> </a>
-          <a style="color:white;"class="nav-link nav-link navl mx-lg-2" href="{% url 'gallery' %}"><h6 class="m-0 p-0 ">GALLERY</h6> </a>
-          <a style="color:white;"class="nav-link nav-link navl mx-lg-2"href="{% url 'contactus' %}"><h6 class="m-0 p-0 ">CONTACT</h6> </a>
-          <a style="color:white;"class="nav-link nav-link navl mx-lg-2"href="{% url 'our_products' %}"><h6 class="m-0 p-0 ">OUR PRODUCTS</h6> </a>
+          <a style="color:white;"
+             class="nav-item nav-link navl mx-lg-2"
+             href="{% url 'home' %}">
+            <h6 class="m-0 p-0 ">HOME</h6>
+          </a>
+          <a style="color:white;"
+             class="nav-link  nav-link navl mx-lg-2"
+             href="{% url 'civilworks' %}">
+            <h6 class="m-0 p-0 ">CIVIL WORKS</h6>
+          </a>
+          <a style="color:white;"
+             class="nav-link  nav-link navl mx-lg-2"
+             href="{% url 'construction_chemicals' %}">
+            <h6 class="m-0 p-0 ">CONSTRUCTION CHEMICALS</h6>
+          </a>
+          <a style="color:white;"
+             class="nav-link nav-link navl mx-lg-2"
+             href="{% url 'internship' %}">
+            <h6 class="m-0 p-0 ">INTERNSHIP</h6>
+          </a>
+          <a style="color:white;"
+             class="nav-link nav-link navl mx-lg-2"
+             href="{% url 'gallery' %}">
+            <h6 class="m-0 p-0 ">GALLERY</h6>
+          </a>
+          <a style="color:white;"
+          class="nav-link nav-link navl mx-lg-2"
+          href="{% url 'work_updates' %}">
+         <h6 class="m-0 p-0 ">WORK UPDATES</h6>
+       </a>
+          <a style="color:white;"
+             class="nav-link nav-link navl mx-lg-2"
+             href="{% url 'contactus' %}">
+            <h6 class="m-0 p-0 ">CONTACT</h6>
+          </a>
+          <a style="color:white;"
+             class="nav-link nav-link navl mx-lg-2"
+             href="{% url 'our_products' %}">
+            <h6 class="m-0 p-0 ">OUR PRODUCTS</h6>
+          </a>
         </div>
       </div>
     </nav>
-
     <style>
       a h6{
         color:white;
@@ -112,15 +144,34 @@
         a h6:hover{
           color:orange;
         }
-
+.bg-color{
+  background-color:rgba(0,0,0,.9);
+}
+.bg-1{
+  background-color:rgba(0,0,0,.4);
+  backdrop-filter: blur(15px);
+}
 
       
     </style>
-    
-    
+    <script type="text/javascript">
+      var nav = document.querySelector('nav');
 
-
-
+      window.addEventListener('scroll', function () {
+          if (window.pageYOffset > 100) {
+              nav.classList.add('bg-color', 'shadow');
+              nav.classList.remove('bg-1', 'shadow');
+          } 
+          else {
+            nav.classList.add('bg-1', 'shadow');
+              nav.classList.remove('bg-color', 'shadow');
+          }
+      });
+      AOS.init();
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@700&family=Hubballi&family=Koulen&family=League+Gothic&family=Lobster&family=Oswald:wght@500&family=Pacifico&family=Righteous&family=Ropa+Sans&family=Staatliches&family=Yanone+Kaffeesatz:wght@500&display=swap');
+    </style>
     {% comment %} carosel {% endcomment %}
     <!-- Carousel Start -->
     <div class="banner-carousel banner-carousel-1 mb-0">
@@ -213,9 +264,11 @@
           </style>
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
             <div class="h-100">
-              <div class="border-start border-5 border-primary ps-4 mb-5 m-0 p-0">
+              <div class="border-start border-5 border-warning ps-4 mb-5 m-0 p-0">
                 <h6 class="text-body text-uppercase mb-2 p-0">About Us</h6>
-                <h1 class="display-6 m-0 p-0">Unique Solutions For Residentials & Industries!</h1>
+                <h1 class="display-6 m-0 p-0"style="font-family: 'Staatliches', cursive;">
+                  Unique Solutions For Residentials & Industries!
+                </h1>
               </div>
               <p style="text-align:justify;" class="m-0">
                 SQ Engineering Contractors Pvt Ltd. a world class civil engineering and construction company established
@@ -240,9 +293,9 @@
       <div class="container">
         <div class="row g-5">
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="border-start border-5 border-primary ps-4 mb-5">
+            <div class="border-start border-5 border-warning ps-4 mb-5">
               <h6 class="text-body text-uppercase mb-2">Why Choose Us!</h6>
-              <h1 class="display-6 mb-0">Our Specialization And Company Features</h1>
+              <h1 class="display-6 mb-0"style="font-family: 'Staatliches', cursive;">Our Specialization And Company Features</h1>
             </div>
             <p class="mb-5 " style="text-align:justify;">
               Our company is committed to serve its customers with superior quality components and unique design.
@@ -255,26 +308,30 @@
             <div class="row gy-5 gx-4">
               <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
                 <div class="d-flex align-items-center mb-3">
-                  <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
+                  <i class="fa fa-check fa-2x text-warning flex-shrink-0 me-3"></i>
                   <h6 class="mb-0">Large number of services provided</h6>
                 </div>
               </div>
               <div class="col-6 wow fadeIn" data-wow-delay="0.2s">
                 <div class="d-flex align-items-center mb-3">
-                  <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                  <h6 class="mb-0">12+ years of professional experience</h6>
+                  <i class="fa fa-check fa-2x text-warning flex-shrink-0 me-3"></i>
+                  <h6 class="mb-0">
+                    12+ years of professional experience
+                  </h6>
                 </div>
                 >
               </div>
               <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
                 <div class="d-flex align-items-center mb-3">
-                  <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
-                  <h6 class="mb-0">A large number of grateful customers</h6>
+                  <i class="fa fa-check fa-2x text-warning flex-shrink-0 me-3"></i>
+                  <h6 class="mb-0">
+                    A large number of grateful customers
+                  </h6>
                 </div>
               </div>
               <div class="col-6 wow fadeIn" data-wow-delay="0.4s">
                 <div class="d-flex align-items-center mb-3">
-                  <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
+                  <i class="fa fa-check fa-2x text-warning flex-shrink-0 me-3"></i>
                   <h6 class="mb-0">
                     Always reliable and affordable prices
                   </h6>
@@ -282,7 +339,7 @@
               </div>
               <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
                 <div class="d-flex align-items-center mb-3">
-                  <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
+                  <i class="fa fa-check fa-2x text-warning flex-shrink-0 me-3"></i>
                   <h6 class="mb-0">
                     Ontime at services
                   </h6>
@@ -290,7 +347,7 @@
               </div>
               <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
                 <div class="d-flex align-items-center mb-3">
-                  <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
+                  <i class="fa fa-check fa-2x text-warning flex-shrink-0 me-3"></i>
                   <h6 class="mb-0">
                     24/7 hours services
                   </h6>
@@ -298,7 +355,7 @@
               </div>
               <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
                 <div class="d-flex align-items-center mb-3">
-                  <i class="fa fa-check fa-2x text-primary flex-shrink-0 me-3"></i>
+                  <i class="fa fa-check fa-2x text-warning flex-shrink-0 me-3"></i>
                   <h6 class="mb-0">
                     Verified professionals
                   </h6>
@@ -324,15 +381,16 @@
   <div class=" m-0 p-5 fadeInUp wow"
        data-wow-delay="0.5s"
        style="background-color:white;">
-    <div class="border-start border-5 border-primary ps-4 mb-5 m-0 p-0">
+    <div class="border-start border-5 border-warning ps-4 mb-5 m-0 p-0">
       <h6 class="text-body text-uppercase mb-2 p-0">
         OUR CLIENTS
       </h6>
-      <h1 class="display-6 m-0 p-0">
-        COMPANIES WE HAVE
+      <h1 class="display-6 m-0 p-0"
+          style="font-family: 'Staatliches', cursive;">
+        SUCESSFULLY COMPLETED WORKS WITH
       </h1>
     </div>
-    <div class="imagess row containter-fluid border-top border-2 p-sm-5 border-primary">
+    <div class="imagess row containter-fluid border-top border-2 p-sm-5 border-warning">
       <div class="col-sm-3 flexy  fadeInUp wow p-3" data-wow-delay="0.5s">
         <img src="{% static 'images/client/1.png' %}">
       </div>
@@ -413,6 +471,30 @@
       </div>
       <div class="col-sm-3 flexy  fadeInUp wow p-3" data-wow-delay="0.5s">
         <img src="{% static 'images/client/27.png' %}">
+      </div>
+    </div>
+  </div>
+  <!-- our clients-->
+  <div class=" m-0 p-5 fadeInUp wow"
+       data-wow-delay="0.5s"
+       style="background-color:white;">
+    <div class="border-start border-5 border-warning ps-4 mb-5 m-0 p-0">
+      <h6 class="text-body text-uppercase mb-2 p-0">
+        OUR CLIENTS
+      </h6>
+      <h1 class="display-6 m-0 p-0"style="font-family: 'Staatliches', cursive;">
+        ONGOING WORKS WITH
+      </h1>
+    </div>
+    <div class="imagess row containter-fluid border-top border-2 p-sm-5 border-warning">
+      <div class="col-sm-3 flexy  fadeInUp wow p-3" data-wow-delay="0.5s">
+        <img src="{% static 'images/client/a1.jpg' %}">
+      </div>
+      <div class="col-sm-3 flexy  fadeInUp wow p-3" data-wow-delay="0.5s">
+        <img src="{% static 'images/client/a2.png' %}">
+      </div>
+      <div class="col-sm-3 flexy  fadeInUp wow p-3" data-wow-delay="0.5s">
+        <img src="{% static 'images/client/a3.jpg' %}">
       </div>
     </div>
   </div>
